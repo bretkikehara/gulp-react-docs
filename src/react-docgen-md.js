@@ -104,9 +104,7 @@ function merge(defaults, overrides) {
     return merged;
 }
 
-var reactDocgenMarkdown = function(componentSrc, options) {
-    var docs = reactDocs.parse(componentSrc);
-
+var reactDocgenMarkdown = function(options) {
     var verbose = options.verbose || false;
     var partialsOverride = options.partials || {};
     var helpersOverride = options.helpers || {};
@@ -134,15 +132,13 @@ var reactDocgenMarkdown = function(componentSrc, options) {
 
     log('compiling template: document');
     var reactDocgenTemplate = Handlebars.compile('{{> document data }}');
-    return reactDocgenTemplate({
-        data: {
-            relativePath    : options.relativePath,
-            srcLink         : options.srcLink,
-            componentName   : options.componentName,
-            description     : docs.description,
-            props           : sortObjectByKey(docs.props)
-        },
-    });
+
+    return function(componentSrc, options) {
+        var docs = reactDocs.parse(componentSrc);
+        options.data.description = docs.description;
+        options.data.props = sortObjectByKey(docs.props);
+        return reactDocgenTemplate(options);
+    };
 };
 
 module.exports = reactDocgenMarkdown;
