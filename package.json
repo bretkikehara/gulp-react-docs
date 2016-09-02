@@ -1,6 +1,6 @@
 {
-  "name": "gulp-react-docs",
-  "version": "0.1.2",
+  "name": "gulp-react-docs--templates",
+  "version": "0.2.0-alpha",
   "description": "A gulp plugin for generating documentation in Markdown format for React components based on their `propTypes`.",
   "license": "MIT",
   "main": "index.js",
@@ -18,10 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adroll/gulp-react-docs.git"
+    "url": "git+https://github.com/bretkikehara/gulp-react-docs.git"
   },
   "bugs": {
-    "url": "https://github.com/adroll/gulp-react-docs/issues"
+    "url": "https://github.com/bretkikehara/gulp-react-docs/issues"
   },
   "dependencies": {
     "gulp-util": "^3.0.7",
