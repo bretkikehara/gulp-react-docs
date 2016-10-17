@@ -1,13 +1,14 @@
 {
-  "name": "gulp-react-docs--templates",
-  "version": "0.2.0-alpha",
+  "name": "@bretkikehara/gulp-react-docs",
+  "version": "0.2.0",
   "description": "A gulp plugin for generating documentation in Markdown format for React components based on their `propTypes`.",
   "license": "MIT",
   "main": "index.js",
   "contributors": [
     "Mars Jullian <mars@adroll.com>",
     "Jyri Tuulos <jyri@adroll.com>",
-    "Jessica Grist <jessica.grist@adroll.com>"
+    "Jessica Grist <jessica.grist@adroll.com>",
+    "Bret K. Ikehara <bret.k.ikehara@gmail.com>"
   ],
   "keywords": [
     "gulp",
